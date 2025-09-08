@@ -124,7 +124,7 @@ export default function Home() {
                 <div className="text-sm text-[#FFE286]">Giá gốc: <span className="line-through">500.000</span></div>
                 <div className="mt-1 bg-white rounded-xl px-3 py-1 inline-block">
                   <div className="text-[13px] font-semibold text-black">Chỉ còn:</div>
-                  <div className="text-[20px] font-extrabold text-[#C83A31]">299.000 VNĐ / CÁI</div>
+                  <div className="text-[20px] font-extrabold text-[#C83A31]">249.000 VNĐ / CÁI</div>
                 </div>
               </div>
             </div>
