@@ -19,7 +19,7 @@ export default function Home() {
     return { hours, minutes, seconds };
   };
 
-  const [timeLeft, setTimeLeft] = useState(getTimeUntilMidnight());
+  const [timeLeft, setTimeLeft] = useState({ hours: 0, minutes: 0, seconds: 0 });
 
   // Carousel state
   const carouselImages = [
@@ -39,6 +39,8 @@ export default function Home() {
   }, [carouselImages.length]);
 
   useEffect(() => {
+    // Đồng bộ sau khi mount để tránh mismatch SSR/CSR
+    setTimeLeft(getTimeUntilMidnight());
     const timer = setInterval(() => {
       setTimeLeft(getTimeUntilMidnight());
     }, 1000);
