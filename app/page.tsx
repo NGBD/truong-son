@@ -53,7 +53,7 @@ export default function Home() {
     <div className="min-h-screen bg-[#FFE286]">
       {/* Header */}
       <header className="bg-gradient-to-r from-[#BDEFB0] to-[#91D87D] text-[#B81C25] py-4 px-6">
-        <div className="max-w-6xl mx-auto flex justify-between items-center">
+        <div className="max-w-6xl mx-auto flex justify-center items-center">
           <h1 className="text-2xl font-bold uppercase">Nhẫn Bạc Hộ Tâm</h1>
  
         </div>
@@ -101,7 +101,7 @@ export default function Home() {
            <span className="text-red-500 italic font-semibold text-[20px]">Sale sốc!!!</span> NHẪN BẠC HỘ TÂM – BẢN RỘNG 10MM | PHONG THỦY – TRẤN AN – TÀI LỘC
             </div>
           {/* Top CTA */}
-          <button onClick={openOrder} className="w-full mt-2 bg-[#D5352C] hover:bg-[#bb221a] text-white font-extrabold text-xl py-4 rounded-full shadow mb-5 transition-colors">
+          <button onClick={openOrder} className="w-full mt-2 bg-[#D5352C] hover:bg-[#bb221a] text-white font-extrabold text-xl py-4 rounded-full shadow mb-5 transition-colors animate-zoom">
             Đặt Hàng Ngay
           </button>
 
@@ -144,7 +144,7 @@ export default function Home() {
       
 
           {/* Middle CTA */}
-          <button onClick={openOrder} className="w-full bg-[#D5352C] hover:bg-[#bb221a] text-white font-extrabold text-xl py-4 rounded-full shadow mt-5 transition-colors">
+          <button onClick={openOrder} className="w-full bg-[#D5352C] hover:bg-[#bb221a] text-white font-extrabold text-xl py-4 rounded-full shadow mt-5 transition-colors animate-zoom">
             Đặt Hàng Ngay
           </button>
 
@@ -168,7 +168,7 @@ export default function Home() {
             <Image src="/images/slide4.jpg" alt="images7" width={400} height={100} className="w-full h-auto" />
             <Image src="/images/slide3.jpg" alt="images7" width={400} height={100} className="w-full h-auto" />
             <Image src="/images/slide1.jpg" alt="images7" width={400} height={100} className="w-full h-auto" />
-            <button onClick={openOrder} className="w-full bg-[#D5352C] hover:bg-[#bb221a] text-white font-extrabold text-xl py-4 rounded-xl shadow my-5 transition-colors">
+            <button onClick={openOrder} className="w-full bg-[#D5352C] hover:bg-[#bb221a] text-white font-extrabold text-xl py-4 rounded-xl shadow my-5 transition-colors animate-zoom">
             Đặt Hàng Ngay
           </button>
             <Image src="/images/images6.png" alt="images7" width={400} height={100} className="w-full h-auto" />
@@ -227,7 +227,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <button onClick={openOrder} className="w-full bg-[#D5352C] hover:bg-[#bb221a] text-white font-extrabold text-xl rounded-xl shadow p-2 transition-colors my-2">
+      <button onClick={openOrder} className="w-full bg-[#D5352C] hover:bg-[#bb221a] text-white font-extrabold text-xl rounded-xl shadow p-2 transition-colors my-2 animate-zoom">
             Đặt Hàng Ngay
           </button>
 
@@ -260,7 +260,7 @@ export default function Home() {
           <h3 className="text-3xl font-bold mb-4 text-green-600">4000+ KHÁCH HÀNG</h3>
           <p className="text-xl text-red-600 font-bold">ĐÃ MUA TRONG TUẦN QUA</p>
           <Image src="/images/slide3.jpg" alt="images7" width={400} height={100} className="w-full h-auto" />
-          <button onClick={openOrder} className="w-[300px] bg-[#D5352C] hover:bg-[#bb221a] text-white font-extrabold text-xl rounded-xl shadow p-2 transition-colors my-2">
+          <button onClick={openOrder} className="w-[300px] bg-[#D5352C] hover:bg-[#bb221a] text-white font-extrabold text-xl rounded-xl shadow p-2 transition-colors my-2 animate-zoom">
             Đặt Hàng Ngay
           </button>
         </div>
@@ -320,7 +320,7 @@ export default function Home() {
           <OrderForm />
         </div>
       </section>
-      <section className="py-16 px-6 bg-gray-50">
+      <section className="py-16 px-6 bg-gray-50 w-full justify-center flex">
         <div className="max-w-6xl">
           <h3 className="text-3xl font-bold text-center text-gray-800 mb-12 uppercase">Chính sách bán hàng</h3>
           <div className="grid-cols-2 gap-2 grid justify-center items-center">

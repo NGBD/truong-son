@@ -104,13 +104,18 @@ export default function OrderForm({ defaultCombo = 'c1', defaultSize = '', onSub
   };
 
   return (
-    <div className="w-full max-w-md mx-auto bg-[#F8D777] rounded-2xl p-6 shadow relative">
+    <div className="w-full max-w-md mx-auto rounded-2xl p-6 relative"
+    
+    style={{
+    fontSize:"12px !important"
+    }}
+    >
       {notice && (
         <div className="fixed left-1/2 -translate-x-1/2 top-4 bg-green-600 text-white text-sm font-semibold px-4 py-2 rounded-full shadow z-[60]">
           {notice}
         </div>
       )}
-      <h3 className="text-red-600 text-3xl font-extrabold text-center mb-4">Thông tin đặt hàng</h3>
+      <h3 className="text-red-600 text-[29px] font-bold text-center mb-4">Thông tin đặt hàng</h3>
 
       <form onSubmit={handleSubmit} className="space-y-3">
         <input
@@ -119,7 +124,7 @@ export default function OrderForm({ defaultCombo = 'c1', defaultSize = '', onSub
           onChange={(e) => setFullName(e.target.value)}
           placeholder="Họ và tên"
           required
-          className="w-full rounded-full px-5 py-3 bg-white outline-none text-red-600"
+          className="w-full text-[12px] rounded-full px-5 py-3 bg-white outline-none text-red-600"
         />
 
         <input
@@ -128,7 +133,7 @@ export default function OrderForm({ defaultCombo = 'c1', defaultSize = '', onSub
           onChange={(e) => setPhone(e.target.value)}
           placeholder="Số điện thoại"
           required
-          className="w-full rounded-full px-5 py-3 bg-white outline-none text-red-600"
+          className="w-full rounded-full text-[12px] px-5 py-3 bg-white outline-none text-red-600"
         />
 
         <input
@@ -136,20 +141,20 @@ export default function OrderForm({ defaultCombo = 'c1', defaultSize = '', onSub
           value={address}
           onChange={(e) => setAddress(e.target.value)}
           placeholder="Địa chỉ ( Nhập địa chỉ cũ trước khi sát nhập)"
-          className="w-full rounded-full px-5 py-3 bg-white outline-none text-red-600"
+          className="w-full rounded-full text-[12px] px-5 py-3 bg-white outline-none text-red-600"
         />
 
         <div className="bg-white rounded-2xl p-4">
           <div className="space-y-2 text-sm text-[#B22222]">
             {comboOptions.map((opt) => (
-              <label key={opt.id} className="flex items-center gap-2 text-red-600">
+              <label key={opt.id} className="flex items-center gap-2 text-red-600 text-[12px]">
                 <input
                   type="radio"
                   name="combo"
                   value={opt.id}
                   checked={combo === opt.id}
                   onChange={() => setCombo(opt.id)}
-                  className="accent-red-600"
+                  className="accent-red-600 text-[12px]"
                 />
                 <span>{opt.label}</span>
               </label>
