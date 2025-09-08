@@ -104,7 +104,7 @@ export default function OrderForm({ defaultCombo = 'c1', defaultSize = '', onSub
   };
 
   return (
-    <div className="w-full max-w-md mx-auto rounded-2xl p-6 relative"
+    <div className="w-full max-w-md mx-auto rounded-2xl p-6 relative bg-amber-200"
     
     style={{
     fontSize:"12px !important"

@@ -101,10 +101,11 @@ export default function Home() {
            <span className="text-red-500 italic font-semibold text-[20px]">Sale sốc!!!</span> NHẪN BẠC HỘ TÂM – BẢN RỘNG 10MM | PHONG THỦY – TRẤN AN – TÀI LỘC
             </div>
           {/* Top CTA */}
-          <button onClick={openOrder} className="w-full mt-2 bg-[#D5352C] hover:bg-[#bb221a] text-white font-extrabold text-xl py-4 rounded-full shadow mb-5 transition-colors animate-zoom">
+          <div className="flex justify-center px-4">
+          <button onClick={openOrder} className="w-full mt-2 bg-[#D5352C] hover:bg-[#bb221a] text-white font-extrabold text-xl py-4 rounded-full shadow transition-colors animate-zoom">
             Đặt Hàng Ngay
           </button>
-
+          </div>
           {/* Offer Card */}
           <div className="rounded-2xl max-w-[600px] mx-auto mt-4">
             <div
@@ -144,9 +145,11 @@ export default function Home() {
       
 
           {/* Middle CTA */}
-          <button onClick={openOrder} className="w-full bg-[#D5352C] hover:bg-[#bb221a] text-white font-extrabold text-xl py-4 rounded-full shadow mt-5 transition-colors animate-zoom">
+          <div className="flex justify-center px-4">
+          <button onClick={openOrder} className="w-full mt-2 bg-[#D5352C] hover:bg-[#bb221a] text-white font-extrabold text-xl py-4 rounded-full shadow transition-colors animate-zoom">
             Đặt Hàng Ngay
           </button>
+          </div>
 
               {/* Benefits */}
               <div className="mt-4 bg-white rounded-2xl p-4 shadow">
@@ -168,9 +171,12 @@ export default function Home() {
             <Image src="/images/slide4.jpg" alt="images7" width={400} height={100} className="w-full h-auto" />
             <Image src="/images/slide3.jpg" alt="images7" width={400} height={100} className="w-full h-auto" />
             <Image src="/images/slide1.jpg" alt="images7" width={400} height={100} className="w-full h-auto" />
-            <button onClick={openOrder} className="w-full bg-[#D5352C] hover:bg-[#bb221a] text-white font-extrabold text-xl py-4 rounded-xl shadow my-5 transition-colors animate-zoom">
+            <div className="flex justify-center px-4">
+          <button onClick={openOrder} className="w-full my-4 bg-[#D5352C] hover:bg-[#bb221a] text-white font-extrabold text-xl py-4 rounded-full shadow transition-colors animate-zoom">
             Đặt Hàng Ngay
           </button>
+          </div>
+       
             <Image src="/images/images6.png" alt="images7" width={400} height={100} className="w-full h-auto" />
           </div>
         </div>
@@ -227,27 +233,28 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <button onClick={openOrder} className="w-full bg-[#D5352C] hover:bg-[#bb221a] text-white font-extrabold text-xl rounded-xl shadow p-2 transition-colors my-2 animate-zoom">
+      <div className="flex justify-center px-4">
+          <button onClick={openOrder} className="w-[80%] my-2 bg-[#D5352C] hover:bg-[#bb221a] text-white font-extrabold text-xl py-4 rounded-full shadow transition-colors animate-zoom">
             Đặt Hàng Ngay
           </button>
-
+          </div>
       {/* Countdown Timer */}
-      <section className="py-12 px-6 bg-red-600 text-white text-center">
+      <section className="py-12 px-2 bg-red-600 text-white text-center">
         <h3 className="text-2xl font-bold mb-6">Ưu đãi chỉ còn kéo dài trong</h3>
-        <div className="flex justify-center space-x-4 text-4xl font-bold">
-          <div className="bg-white/20 rounded-lg p-4">
+        <div className="flex justify-center space-x-2 text-4xl font-bold">
+          <div className="bg-white/20 rounded-lg p-2">
             <div>00</div>
             <div className="text-sm">Ngày</div>
           </div>
-          <div className="bg-white/20 rounded-lg p-4">
+          <div className="bg-white/20 rounded-lg p-2">
             <div>{String(timeLeft.hours).padStart(2, '0')}</div>
             <div className="text-sm">Giờ</div>
           </div>
-          <div className="bg-white/20 rounded-lg p-4">
+          <div className="bg-white/20 rounded-lg p-2">
             <div>{String(timeLeft.minutes).padStart(2, '0')}</div>
             <div className="text-sm">Phút</div>
           </div>
-          <div className="bg-white/20 rounded-lg p-4">
+          <div className="bg-white/20 rounded-lg p-2">
             <div>{String(timeLeft.seconds).padStart(2, '0')}</div>
             <div className="text-sm">Giây</div>
           </div>
@@ -260,9 +267,11 @@ export default function Home() {
           <h3 className="text-3xl font-bold mb-4 text-green-600">4000+ KHÁCH HÀNG</h3>
           <p className="text-xl text-red-600 font-bold">ĐÃ MUA TRONG TUẦN QUA</p>
           <Image src="/images/slide3.jpg" alt="images7" width={400} height={100} className="w-full h-auto" />
-          <button onClick={openOrder} className="w-[300px] bg-[#D5352C] hover:bg-[#bb221a] text-white font-extrabold text-xl rounded-xl shadow p-2 transition-colors my-2 animate-zoom">
+          <div className="flex justify-center px-4">
+          <button onClick={openOrder} className="w-full my-2 bg-[#D5352C] hover:bg-[#bb221a] text-white font-extrabold text-xl py-4 rounded-full shadow transition-colors animate-zoom">
             Đặt Hàng Ngay
           </button>
+          </div>
         </div>
       </section>
 
