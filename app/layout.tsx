@@ -17,6 +17,24 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Nhẫn Bạc Hộ Tâm - Nhẫn Bạc Hộ Tâm Phong Thủy",
   description: "Quà Tặng Phong Thủy Ý Nghĩa - Thu Hút Vận May Ngay Tại Nhà. Nhẫn Bạc Hộ Tâm cao cấp, bảo hành 12 tháng, giao hàng toàn quốc.",
+  openGraph: {
+    title: "Nhẫn Bạc Hộ Tâm - Nhẫn Bạc Hộ Tâm Phong Thủy",
+    description: "Quà Tặng Phong Thủy Ý Nghĩa - Thu Hút Vận May Ngay Tại Nhà. Nhẫn Bạc Hộ Tâm cao cấp, bảo hành 12 tháng, giao hàng toàn quốc.",
+    images: [
+      {
+        url: "/images/slide1.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Nhẫn Bạc Hộ Tâm"
+      }
+    ]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Nhẫn Bạc Hộ Tâm - Nhẫn Bạc Hộ Tâm Phong Thủy",
+    description: "Quà Tặng Phong Thủy Ý Nghĩa - Thu Hút Vận May Ngay Tại Nhà. Nhẫn Bạc Hộ Tâm cao cấp, bảo hành 12 tháng, giao hàng toàn quốc.",
+    images: ["/images/slide1.jpg"]
+  }
 };
 
 export default function RootLayout({
