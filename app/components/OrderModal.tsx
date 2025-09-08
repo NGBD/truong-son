@@ -6,9 +6,11 @@ import OrderForm from './OrderForm';
 type OrderModalProps = {
   open: boolean;
   onClose: () => void;
+  defaultCombo?: 'c1' | 'c2' | 'c3';
+  defaultSize?: string;
 };
 
-export default function OrderModal({ open, onClose }: OrderModalProps) {
+export default function OrderModal({ open, onClose, defaultCombo = 'c1', defaultSize = '' }: OrderModalProps) {
   if (!open) return null;
 
   return (
@@ -25,7 +27,7 @@ export default function OrderModal({ open, onClose }: OrderModalProps) {
             Đóng
           </button>
         </div>
-        <OrderForm />
+        <OrderForm defaultCombo={defaultCombo} defaultSize={defaultSize} onSubmitted={onClose} />
       </div>
     </div>
   );

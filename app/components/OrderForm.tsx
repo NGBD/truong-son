@@ -1,28 +1,55 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 type ComboOption = {
-  id: string;
+  id: 'c1' | 'c2' | 'c3';
   label: string;
   price: string;
 };
 
 const comboOptions: ComboOption[] = [
-  { id: 'c1', label: '1 Nhẫn Hộ Tâm : 299.000đ + Miễn Ship', price: '299000' },
-  { id: 'c2', label: '2 Nhẫn Hộ Tâm : 550.000đ + Miễn Ship', price: '550000' },
-  { id: 'c3', label: '3 Nhẫn Hộ Tâm : 759.000đ + Miễn Ship', price: '759000' }
+  { id: 'c1', label: '1 Nhẫn Hộ Tâm : 249.000đ + Miễn Ship', price: '249000' },
+  { id: 'c2', label: '2 Nhẫn Hộ Tâm : 480.000đ + Miễn Ship', price: '480000' },
+  { id: 'c3', label: '3 Nhẫn Hộ Tâm : 700.000đ + Miễn Ship', price: '700000' }
 ];
 
 const sizeOptions = ['Size', '15', '16', '17', '18', '19', '20'];
 
-export default function OrderForm() {
+type OrderFormProps = {
+  defaultCombo?: 'c1' | 'c2' | 'c3';
+  defaultSize?: string;
+  onSubmitted?: () => void;
+};
+
+export default function OrderForm({ defaultCombo = 'c1', defaultSize = '', onSubmitted }: OrderFormProps) {
   const [fullName, setFullName] = useState('');
   const [phone, setPhone] = useState('');
   const [address, setAddress] = useState('');
-  const [combo, setCombo] = useState('c1');
-  const [size, setSize] = useState('');
+  const [combo, setCombo] = useState<'c1' | 'c2' | 'c3'>(defaultCombo);
+  const [size, setSize] = useState<string>(defaultSize);
   const [submitting, setSubmitting] = useState(false);
+  const [notice, setNotice] = useState<string | null>(null);
+
+  type FbqFunction = (
+    command: string,
+    param1?: string | number | Record<string, unknown>,
+    param2?: Record<string, unknown>
+  ) => void;
+
+  const getFbq = (): FbqFunction | undefined => {
+    if (typeof window === 'undefined') return undefined;
+    const win = window as unknown as { fbq?: FbqFunction };
+    return win.fbq;
+  };
+
+  useEffect(() => {
+    setCombo(defaultCombo);
+  }, [defaultCombo]);
+
+  useEffect(() => {
+    setSize(defaultSize);
+  }, [defaultSize]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -44,12 +71,30 @@ export default function OrderForm() {
       });
       const data = await res.json();
       if (!res.ok) throw new Error(data?.error || 'Gửi thất bại');
-      alert('Đặt hàng thành công! Chúng tôi sẽ liên hệ xác nhận.');
+      // Track Facebook Pixel Purchase event
+      try {
+        const priceMap: Record<string, number> = { c1: 299000, c2: 550000, c3: 759000 };
+        const value = priceMap[combo] ?? 0;
+        const fbq = getFbq();
+        if (fbq) {
+          fbq('track', 'Purchase', {
+            value,
+            currency: 'VND',
+            contents: [{ id: combo, quantity: 1 }],
+            content_type: 'product'
+          });
+        }
+      } catch {}
+      setNotice('Đặt hàng thành công! Chúng tôi sẽ liên hệ xác nhận.');
+      setTimeout(() => {
+        setNotice(null);
+        if (onSubmitted) onSubmitted();
+      }, 1500);
       setFullName('');
       setPhone('');
       setAddress('');
-      setCombo('c1');
-      setSize('');
+      setCombo(defaultCombo);
+      setSize(defaultSize);
     } catch (err: unknown) {
       const message = err instanceof Error ? err.message : 'Lỗi không xác định';
       alert('Có lỗi khi gửi đơn: ' + message);
@@ -59,7 +104,12 @@ export default function OrderForm() {
   };
 
   return (
-    <div className="w-full max-w-md mx-auto bg-[#F8D777] rounded-2xl p-6 shadow">
+    <div className="w-full max-w-md mx-auto bg-[#F8D777] rounded-2xl p-6 shadow relative">
+      {notice && (
+        <div className="fixed left-1/2 -translate-x-1/2 top-4 bg-green-600 text-white text-sm font-semibold px-4 py-2 rounded-full shadow z-[60]">
+          {notice}
+        </div>
+      )}
       <h3 className="text-red-600 text-3xl font-extrabold text-center mb-4">Thông tin đặt hàng</h3>
 
       <form onSubmit={handleSubmit} className="space-y-3">

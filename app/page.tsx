@@ -116,10 +116,10 @@ export default function Home() {
             >
               <div className="px-2 py-2">
                 <div className="text-[13px] font-extrabold text-white tracking-wide">ƯU ĐÃI LÊN TỚI</div>
-                <div className="text-[44px] leading-none font-black text-[#FFE286]">45%</div>
+                <div className="text-[44px] leading-none font-black text-[#FFE286]">50%</div>
               </div>
               <div className="text-right px-2">
-                <div className="text-sm text-[#FFE286]">Giá gốc: <span className="line-through">550.000</span></div>
+                <div className="text-sm text-[#FFE286]">Giá gốc: <span className="line-through">500.000</span></div>
                 <div className="mt-1 bg-white rounded-xl px-3 py-1 inline-block">
                   <div className="text-[13px] font-semibold text-black">Chỉ còn:</div>
                   <div className="text-[20px] font-extrabold text-[#C83A31]">299.000 VNĐ / CÁI</div>
@@ -130,9 +130,9 @@ export default function Home() {
             {/* Combo prices */}
             <div className="bg-white rounded-xl shadow-sm border border-[#F3B97B] p-3 mt-4">
               <ul className="text-[14px] text-gray-800 space-y-2">
-                <li>• 1 Nhẫn Hộ Tâm: <span className="font-semibold">299.000đ</span> + Miễn Ship</li>
-                <li>• 2 Nhẫn Hộ Tâm: <span className="font-semibold">550.000đ</span> + Miễn Ship</li>
-                <li>• 3 Nhẫn Hộ Tâm: <span className="font-semibold">759.000đ</span> + Miễn Ship</li>
+                <li>• 1 Nhẫn Hộ Tâm: <span className="font-semibold">249.000đ</span> + Miễn Ship</li>
+                <li>• 2 Nhẫn Hộ Tâm: <span className="font-semibold">480.000đ</span> + Miễn Ship</li>
+                <li>• 3 Nhẫn Hộ Tâm: <span className="font-semibold">700.000đ</span> + Miễn Ship</li>
               </ul>
               <div className="text-[12px] text-red-800 font-bold mt-2">
               Quà Tặng Phong Thủy Ý Nghĩa - Thu Hút Vận May Cho Bạn
@@ -338,8 +338,8 @@ export default function Home() {
             <div>
               <h4 className="text-xl font-bold mb-4">THÔNG TIN LIÊN HỆ</h4>
               <div className="space-y-2">
-                <p><strong>Email:</strong> cogiangstore@gmail.com</p>
-                <p><strong>Số điện thoại:</strong> 0363.807.221</p>
+                <p><strong>Email:</strong> capduoi13@gmail.com</p>
+                <p><strong>Số điện thoại:</strong> 0342.764.382</p>
               </div>
             </div>
             
