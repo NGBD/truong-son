@@ -233,8 +233,8 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <div className="flex justify-center px-4">
-          <button onClick={openOrder} className="w-[80%] my-2 bg-[#D5352C] hover:bg-[#bb221a] text-white font-extrabold text-xl py-4 rounded-full shadow transition-colors animate-zoom">
+      <div className="flex justify-center px-4 max-w-[400px] mx-auto">
+          <button onClick={openOrder} className="w-full my-2 bg-[#D5352C] hover:bg-[#bb221a] text-white font-extrabold text-xl py-4 rounded-full shadow transition-colors animate-zoom">
             Đặt Hàng Ngay
           </button>
           </div>
@@ -267,7 +267,7 @@ export default function Home() {
           <h3 className="text-3xl font-bold mb-4 text-green-600">4000+ KHÁCH HÀNG</h3>
           <p className="text-xl text-red-600 font-bold">ĐÃ MUA TRONG TUẦN QUA</p>
           <Image src="/images/slide3.jpg" alt="images7" width={400} height={100} className="w-full h-auto" />
-          <div className="flex justify-center px-4">
+          <div className="flex justify-center px-4 max-w-[400px] mx-auto">
           <button onClick={openOrder} className="w-full my-2 bg-[#D5352C] hover:bg-[#bb221a] text-white font-extrabold text-xl py-4 rounded-full shadow transition-colors animate-zoom">
             Đặt Hàng Ngay
           </button>
