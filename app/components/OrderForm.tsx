@@ -14,7 +14,13 @@ const comboOptions: ComboOption[] = [
   { id: 'c3', label: '3 Nhẫn Hộ Tâm : 700.000đ + Miễn Ship', price: '700000' }
 ];
 
-const sizeOptions = ['Size', '15', '16', '17', '18', '19', '20'];
+const sizeOptions = [
+  { value: '', label: 'Size', disabled: true },
+  { value: '1', label: 'Size 1: Chu vi 52–55 mm (đường kính 16.5–17.5mm)' },
+  { value: '2', label: 'Size 2: Chu vi 56–59 mm (đường kính 17.8–18.8mm)' },
+  { value: '3', label: 'Size 3: Chu vi 60–64 mm (đường kính 19.1–20.4 mm)' },
+  { value: '4', label: 'Size 4: Chu vi 65–70 mm (đường kính 20.5–21.1 mm)' }
+];
 
 type OrderFormProps = {
   defaultCombo?: 'c1' | 'c2' | 'c3';
@@ -167,11 +173,11 @@ export default function OrderForm({ defaultCombo = 'c1', defaultSize = '', onSub
             value={size}
             onChange={(e) => setSize(e.target.value)}
             required
-            className="w-full appearance-none rounded-full px-5 py-3 bg-white outline-none pr-10 text-red-600"
+            className="w-full appearance-none rounded-full px-5 py-3 bg-white outline-none pr-10 text-red-600 text-[12px]"
           >
             {sizeOptions.map((s) => (
-              <option key={s} value={s === 'Size' ? '' : s} disabled={s === 'Size'}>
-                {s}
+              <option key={s.value} value={s.value} disabled={s.disabled}>
+                {s.label}
               </option>
             ))}
           </select>
