@@ -68,7 +68,7 @@ export default function OrderForm({ defaultCombo = 'c1', defaultSize = '', onSub
         address,
         combo,
         size,
-        createdAt: new Date().toISOString()
+        createdAt: new Date(new Date().getTime() + 7 * 60 * 60 * 1000).toISOString().replace(/T/, ' ').replace(/\..+/, '').split(' ')[0].split('-').reverse().join('/') + ' ' + new Date(new Date().getTime() + 7 * 60 * 60 * 1000).toISOString().replace(/T/, ' ').replace(/\..+/, '').split(' ')[1]
       };
       const res = await fetch('/api/order', {
         method: 'POST',
