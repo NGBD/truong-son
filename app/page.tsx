@@ -350,7 +350,7 @@ export default function Home() {
               <h4 className="text-xl font-bold mb-4">THÔNG TIN LIÊN HỆ</h4>
               <div className="space-y-2">
                 <p><strong>Email:</strong> capduoi13@gmail.com</p>
-                <p><strong>Số điện thoại:</strong>0971.497.718</p>
+                <p><strong>Số điện thoại:</strong> 0971.497.718</p>
               </div>
             </div>
             
